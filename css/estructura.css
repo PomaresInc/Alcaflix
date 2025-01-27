@@ -1,3 +1,4 @@
+
 /* Se aplica a todos los elementos */
 * {
     margin: 0;
@@ -6,33 +7,28 @@
 }
 
 html {
-    /* para ver el diseño de la web, útil para depurar */
-    background-color: red;
+    background-color: black;
 }
 
 /* Contenedor principal */
 .grid-container {
     display: grid;
-    grid-template-areas:
-        "barra1 barra2"
+    grid-template-areas: "barra1 barra2"
         "main-content main-content"
         "footer footer";
-    grid-template-rows: 10vh 1fr auto; /* Altura: encabezado, contenido flexible, pie */
-    grid-template-columns: 5fr 1fr; /* Ancho: barra lateral fija, contenido flexible */
+    grid-template-rows: 10vh 1fr auto;
+    grid-template-columns: 5fr 1fr;
     min-height: 100vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
 }
 
-/* Estilo para las áreas */
 #barra1 {
     grid-area: barra1;
     background-color: #2d572c;
     color: white;
     text-align: left;
-    display: flex; /* Cambiado a flex para alinear el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    padding: 10px; /* Añadido padding para un mejor espaciado */
+    display: flex;
+    align-items: center;
+
 }
 
 #barra2 {
@@ -54,17 +50,26 @@ html {
     padding: 10px;
 }
 
-
 .btn {
     margin-left: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #2d572c;
     color: white;
     border: none;
-    border-radius: 20px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #2d572d;
+}
+@media (max-width: 500px) {
+    #barra1 {
+        background-color:red;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    #barra1 {
+        background-color:deeppink;
+    }
 }
