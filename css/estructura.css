@@ -1,16 +1,16 @@
-
-/* Se aplica a todos los elementos  */
+/* Se aplica a todos los elementos */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    /* para ver el diseño de la web, útli para depurar*/
+
+html {
+    /* para ver el diseño de la web, útil para depurar */
     background-color: red;
 }
-/* Contenedor principal
-ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de la pantalla */
+
+/* Contenedor principal */
 .grid-container {
     display: grid;
     grid-template-areas:
@@ -18,10 +18,10 @@ ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de
         "main-content main-content"
         "footer footer";
     grid-template-rows: 10vh 1fr auto; /* Altura: encabezado, contenido flexible, pie */
-    grid-template-columns: 5fr 1fr;/*250px 1fr; /* Ancho: barra lateral fija, contenido flexible */
+    grid-template-columns: 5fr 1fr; /* Ancho: barra lateral fija, contenido flexible */
     min-height: 100vh;
     margin-left: 2vh;
-    margin-right: 2vh ;
+    margin-right: 2vh;
 }
 
 /* Estilo para las áreas */
@@ -30,21 +30,41 @@ ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de
     background-color: #2d572c;
     color: white;
     text-align: left;
+    display: flex; /* Cambiado a flex para alinear el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 10px; /* Añadido padding para un mejor espaciado */
 }
+
 #barra2 {
     grid-area: barra2;
     background-color: #f4f4f4;
-
 }
+
 .main-content {
     grid-area: main-content;
     background-color: #333;
     padding: 20px;
 }
+
 .footer {
     grid-area: footer;
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+
+.btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.btn:hover {
+    background-color: #0056b3;
 }
